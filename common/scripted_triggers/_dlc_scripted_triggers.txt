@@ -1,0 +1,32 @@
+has_dlc_pur = { has_dlc = "Poland: United and Ready" }
+has_dlc_tfv = { has_dlc = "Together for Victory" }
+has_dlc_dod = { has_dlc = "Death or Dishonor" }
+has_dlc_wtt = { has_dlc = "Waking the Tiger" }
+has_dlc_mtg = { has_dlc = "Man the Guns" }
+has_dlc_lar = { has_dlc = "La Resistance" }
+has_dlc_bftb = { has_dlc = "Battle for the Bosporus" }
+has_dlc_nsb = { has_dlc = "No Step Back" }
+has_dlc_bba = { has_dlc = "By Blood Alone" }
+has_dlc_aat = { has_dlc = "Arms Against Tyranny" }
+has_dlc_toa = { has_dlc = "Trial of Allegiance" }
+has_dlc_gtd = { has_dlc = "Gotterdammerung" }
+has_dlc_goe = { has_dlc = "Graveyard of Empires" }
+has_dlc_ncns = { has_dlc = "No Compromise, No Surrender" }
+has_dlc_pfot = { has_dlc = "Peace For Our Time" }
+has_dlc_taog = { has_dlc = "Thunder at Our Gates" }
+has_pur = { has_dlc = "Poland: United and Ready" }
+has_tfv = { has_dlc = "Together for Victory" }
+has_dod = { has_dlc = "Death or Dishonor" }
+has_wtt = { has_dlc = "Waking the Tiger" }
+has_mtg = { has_dlc = "Man the Guns" }
+has_lar = { has_dlc = "La Resistance" }
+has_bftb = { has_dlc = "Battle for the Bosporus" }
+has_nsb = { has_dlc = "No Step Back" }
+has_bba = { has_dlc = "By Blood Alone" }
+has_aat = { has_dlc = "Arms Against Tyranny" }
+has_toa = { has_dlc = "Trial of Allegiance" }
+has_gtd = { has_dlc = "Gotterdammerung" }
+has_goe = { has_dlc = "Graveyard of Empires" }
+has_ncns = { has_dlc = "No Compromise, No Surrender" }
+has_pfot = { has_dlc = "Peace For Our Time" }
+has_taog = { has_dlc = "Thunder at Our Gates" }

@@ -1,0 +1,227 @@
+modifiers = {
+	fighter_good = {
+		type = { fighter heavy_fighter interceptor }
+		chance = 0.9
+		effect = {
+			air_attack_factor = 0.03
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	fighter_unique = {
+		type = { fighter heavy_fighter interceptor }
+		chance = 0.4
+		effect = {
+			air_attack_factor = 0.06
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	fighter_genius = {
+		type = { fighter heavy_fighter interceptor }
+		chance = 0.05
+		effect = {
+			air_attack_factor = 0.1
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+	support_good = {
+		type = { cas tactical_bomber }
+		chance = 0.9
+		effect = {
+			ground_attack_factor = 0.03
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	support_unique = {
+		type = { cas tactical_bomber }
+		chance = 0.4
+		effect = {
+			ground_attack_factor = 0.05
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	support_genius = {
+		type = { cas tactical_bomber }
+		chance = 0.05
+		effect = {
+			ground_attack_factor = 0.08
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+	naval_good = {
+		type = { naval_bomber maritime_patrol_plane }
+		chance = 0.9
+		effect = {
+			naval_strike_targetting_factor = 0.03
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	naval_unique = {
+		type = { naval_bomber maritime_patrol_plane }
+		chance = 0.4
+		effect = {
+			naval_strike_targetting_factor = 0.06
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	naval_genius = {
+		type = { naval_bomber maritime_patrol_plane }
+		chance = 0.05
+		effect = {
+			naval_strike_targetting_factor = 0.1
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+	bomber_good = {
+		type = { tactical_bomber strategic_bomber }
+		chance = 0.9
+		effect = {
+			air_strategic_bomber_bombing_factor = 0.05
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	bomber_unique = {
+		type = { tactical_bomber strategic_bomber }
+		chance = 0.4
+		effect = {
+			air_strategic_bomber_bombing_factor = 0.10
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	bomber_genius = {
+		type = { tactical_bomber strategic_bomber }
+		chance = 0.05
+		effect = {
+			air_strategic_bomber_bombing_factor = 0.15
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+	scout_good = {
+		type = { scout_plane air_transport }
+		chance = 0.9
+		effect = {
+			air_mission_efficiency = 0.05
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	scout_unique = {
+		type = { scout_plane air_transport }
+		chance = 0.4
+		effect = {
+			air_mission_efficiency = 0.1
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	scout_genius = {
+		type = { scout_plane air_transport }
+		chance = 0.05
+		effect = {
+			air_mission_efficiency = 0.15
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+	suicide_good = {
+		type = { suicide }
+		chance = 0.9
+		effect = {
+			air_wing_xp_loss_when_killed_factor = -0.05
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	suicide_unique = {
+		type = { suicide }
+		chance = 0.4
+		effect = {
+			air_wing_xp_loss_when_killed_factor = -0.1
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	suicide_genius = {
+		type = { suicide }
+		chance = 0.05
+		effect = {
+			air_wing_xp_loss_when_killed_factor = -0.15
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+	super_good = {
+		type = { fighter interceptor cas naval_bomber suicide tactical_bomber heavy_fighter scout_plane strategic_bomber maritime_patrol_plane air_transport }
+		chance = 0.09
+		effect = {
+			air_attack_factor = 0.03
+			ground_attack_factor = 0.03
+			naval_strike_targetting_factor = 0.03
+			air_strategic_bomber_bombing_factor = 0.05
+			air_mission_efficiency = 0.05
+			air_wing_xp_loss_when_killed_factor = -0.05
+			air_maximum_speed_factor = 0.03
+			air_range_factor = 0.03
+			air_agility_factor = 0.05
+		}
+	}
+	super_unique = {
+		type = { fighter interceptor cas naval_bomber suicide tactical_bomber heavy_fighter scout_plane strategic_bomber maritime_patrol_plane air_transport }
+		chance = 0.04
+		effect = {
+			air_attack_factor = 0.06
+			ground_attack_factor = 0.05
+			naval_strike_targetting_factor = 0.06
+			air_strategic_bomber_bombing_factor = 0.10
+			air_mission_efficiency = 0.1
+			air_wing_xp_loss_when_killed_factor = -0.1
+			air_maximum_speed_factor = 0.05
+			air_range_factor = 0.06
+			air_agility_factor = 0.1
+		}
+	}
+	super_genius = {
+		type = { fighter interceptor cas naval_bomber suicide tactical_bomber heavy_fighter scout_plane strategic_bomber maritime_patrol_plane air_transport }
+		chance = 0.005
+		effect = {
+			air_attack_factor = 0.1
+			ground_attack_factor = 0.08
+			naval_strike_targetting_factor = 0.1
+			air_strategic_bomber_bombing_factor = 0.15
+			air_mission_efficiency = 0.15
+			air_wing_xp_loss_when_killed_factor = -0.15
+			air_maximum_speed_factor = 0.08
+			air_range_factor = 0.1
+			air_agility_factor = 0.15
+		}
+	}
+}

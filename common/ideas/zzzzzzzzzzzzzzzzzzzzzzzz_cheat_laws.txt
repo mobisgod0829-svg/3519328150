@@ -1,0 +1,244 @@
+ideas = {
+	economy = {
+		law = yes
+		real_totaler_krieg_economy = {
+			name = totaler_krieg_economy
+			picture = totaler_krieg_economy
+			visible = {
+				OR = {
+					any_country = {
+						is_ally_with = ROOT
+						has_idea = real_totaler_krieg_economy
+					}
+					has_idea = real_totaler_krieg_economy
+					hidden_trigger = {
+						is_ai = no
+						is_mlm = yes
+					}
+				}
+			}
+			available = {
+				OR = {
+					AND = {
+						has_war = yes
+						has_war_support > 0.59
+					}
+					AND = {
+						has_war = no
+						has_war_support > 0.74
+					}
+				}
+				hidden_trigger = {
+					is_mlm = yes
+					is_ai = no
+				}
+			}
+			allowed_to_remove = {
+				OR = {
+					AND = {
+						has_war = yes
+						has_war_support < 0.6
+					}
+					AND = {
+						has_war = no
+						has_war_support < 0.75
+					}
+				}
+				hidden_trigger = { is_ai = no }
+			}
+			cost = 0
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				conscription = 0.02
+				global_building_slots_factor = 0.1
+				war_support_factor = 0.1
+				trade_opinion_factor = 0.75
+				resistance_target = -0.2
+				research_speed_factor = 0.175
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.45
+				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.125
+				industrial_capacity_factory = 0.7
+				industrial_capacity_dockyard = 0.7
+				conversion_cost_civ_to_mil_factor = -0.4
+				conversion_cost_mil_to_civ_factor = -0.5
+				factory_energy_consumption = 0.45
+			}
+			on_remove = {
+				remove_ideas = real_scraping_the_barrel
+				remove_ideas = real_autarkic_economy
+				remove_ideas = real_special_economic_zones
+			}
+			cancel_if_invalid = no
+		}
+	}
+	mobilization_laws = {
+		law = yes
+		real_scraping_the_barrel = {
+			name = scraping_the_barrel
+			picture = scraping_the_barrel
+			level = 1
+			visible = {
+				OR = {
+					has_idea = real_totaler_krieg_economy
+					has_idea = real_scraping_the_barrel
+				}
+			}
+			available = {
+				has_idea = real_totaler_krieg_economy
+				OR = {
+					AND = {
+						has_war = yes
+						has_war_support > 0.59
+					}
+					AND = {
+						has_war = no
+						has_war_support > 0.74
+					}
+				}
+			}
+			cost = 0
+			removal_cost = -1
+			modifier = {
+				conscription = 0.3
+				mobilization_speed = 0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
+				training_time_factor = 0.45
+			}
+			allowed_to_remove = {
+				if = {
+					limit = { is_ai = yes }
+					NOT = { has_idea = real_totaler_krieg_economy }
+				}
+				else = {
+					OR = {
+						AND = {
+							has_war = yes
+							has_war_support < 0.6
+						}
+						AND = {
+							has_war = no
+							has_war_support < 0.75
+						}
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+	}
+	trade_laws = {
+		law = yes
+		real_autarkic_economy = {
+			name = autarkic_economy
+			picture = autarkic_economy
+			visible = {
+				OR = {
+					has_idea = real_autarkic_economy
+					has_idea = real_totaler_krieg_economy
+				}
+			}
+			available = {
+				has_idea = real_totaler_krieg_economy
+				OR = {
+					AND = {
+						is_subject = no
+						is_in_faction = no
+					}
+					is_faction_leader = yes
+					is_major = yes
+				}
+			}
+			cost = 0
+			removal_cost = -1
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier = {
+				min_export = 0.15
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.10
+				faction_trade_opinion_factor = 0.5
+				cic_construction_boost = 0.15
+				cic_construction_boost_factor = 0.1
+				resource_trade_cost_bonus_per_factory = 1
+			}
+			allowed_to_remove = {
+				if = {
+					limit = { is_ai = yes }
+					NOT = { has_idea = real_totaler_krieg_economy }
+				}
+				else = {
+					is_subject = yes
+					OR = {
+						is_subject = yes
+						is_in_faction = yes
+					}
+					is_faction_leader = no
+					is_major = no
+				}
+			}
+			cancel_if_invalid = no
+		}
+		real_special_economic_zones = {
+			name = RAJ_special_economic_zones
+			picture = RAJ_special_economic_zones
+			visible = {
+				OR = {
+					has_idea = real_special_economic_zones
+					has_idea = real_totaler_krieg_economy
+				}
+			}
+			available = {
+				has_idea = real_totaler_krieg_economy
+				OR = {
+					is_subject = yes
+					is_in_faction = yes
+				}
+				is_faction_leader = no
+				is_major = no
+			}
+			cost = 0
+			removal_cost = -1
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier = {
+				min_export = 0.75
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.10
+				faction_trade_opinion_factor = 0.5
+				cic_construction_boost = 0.15
+				cic_construction_boost_factor = 0.1
+				resource_trade_cost_bonus_per_factory = 1
+			}
+			allowed_to_remove = {
+				if = {
+					limit = { is_ai = yes }
+					NOT = { has_idea = real_totaler_krieg_economy }
+				}
+				else = {
+					OR = {
+						AND = {
+							is_subject = no
+							is_in_faction = no
+						}
+						is_faction_leader = yes
+						is_major = yes
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

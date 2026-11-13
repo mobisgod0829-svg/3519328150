@@ -1,0 +1,372 @@
+sub_units = {
+
+	modern_armor = {
+		abbreviation = "OTK"
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = yes
+
+		type = {
+			armor
+		}
+
+		group = armor
+
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+
+
+		combat_width = 2
+
+		need = {
+			modern_tank_chassis = 40
+		}
+		manpower = 500
+		max_organisation = 15
+		max_strength = 4
+		default_morale = 0.3
+		training_time = 180
+		weight = 1.5
+
+		supply_consumption = 0.25
+
+		breakthrough = 0.15
+
+		#Tanks are awesome
+		# soft_attack = 0.5
+
+		suppression = 2.5
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = {
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	modern_tank_destroyer_brigade = {
+		abbreviation = "OTD"
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = yes
+
+		type = {
+			armor
+			anti_tank
+		}
+
+		group = armor_combat_support
+
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+		}
+
+
+		combat_width = 2
+
+		need = {
+			modern_tank_destroyer_chassis = 40
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.3
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.25
+		defense = 0.25
+		breakthrough = -0.25
+		ap_attack = 0.15
+		suppression = 1.25
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = {
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	modern_tank_destroyer_support = {
+		abbreviation = "OTD"
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = yes
+
+		type = {
+			support
+			armor
+			anti_tank
+		}
+		divisional = no
+		group = support
+		allowed_battalion_groups = { armor mobile_combat_support armor_combat_support }
+
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			#category_tank_destroyers
+			category_support_battalions
+			category_regimental_support_battalions
+			category_tank_destroyer_regimental_support
+		}
+
+		need = {
+			modern_tank_destroyer_chassis = 10
+		}
+		manpower = 180
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		training_time = 120
+		own_equipment_fuel_consumption_mult = 0.33
+		weight = 0.5
+		supply_consumption = 0.08
+
+		breakthrough = -0.6
+		defense = -0.25
+		soft_attack = -0.33
+		hard_attack = -0.33
+		suppression = 0.25
+		armor_value = -0.33
+
+	}
+
+	modern_sp_anti_air_brigade = {
+		abbreviation = "OAA"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = yes
+
+		type = {
+			armor
+			anti_air
+		}
+
+		group = armor_combat_support
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_anti_air
+		}
+
+
+		combat_width = 2
+
+		need = {
+			modern_tank_aa_chassis = 40
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.1
+		defense = 0.25
+		breakthrough = -0.53
+		air_attack = 0.15
+		suppression = 2
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = {
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	modern_sp_anti_air_support = {
+		abbreviation = "OAA"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = yes
+
+		type = {
+			support
+			armor
+			anti_air
+		}
+
+		group = support
+		allowed_battalion_groups = { armor mobile_combat_support armor_combat_support }
+
+		categories = {
+			category_all_armor
+			category_army
+			#category_self_propelled_anti_air
+			category_support_battalions
+			category_regimental_support_battalions
+			category_self_propelled_anti_air_regimental_support
+		}
+
+		divisional = no
+
+		need = {
+			modern_tank_aa_chassis = 10
+		}
+		manpower = 180
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.3
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.06
+		own_equipment_fuel_consumption_mult = 0.33
+		breakthrough = -0.6
+		defense = -0.25
+		soft_attack = -0.33
+		hard_attack = -0.33
+		air_attack = -0.15
+		suppression = 0.5
+		armor_value = -0.33
+	}
+
+	modern_sp_artillery_brigade = {
+		abbreviation = "OAR"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = yes
+		is_artillery_brigade = yes
+
+		type = {
+			armor
+			artillery
+		}
+
+		group = armor_combat_support
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_artillery
+		}
+
+		combat_width = 2
+
+		need = {
+			modern_tank_artillery_chassis = 40
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.5
+		defense = 0.25
+		breakthrough = -0.25
+		soft_attack = 0.15
+		suppression = 1.5
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = {
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+}

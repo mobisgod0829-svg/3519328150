@@ -1,0 +1,342 @@
+dlcs = {
+	dlc000 = {
+		name = "War Stories"
+		steam_id = "445630"
+		category = "others"
+	}
+	dlc001 = {
+		name = "Historical German Portraits"
+		steam_id = "460610"
+		category = "content"
+	}
+	dlc002 = {
+		name = "Poland: United and Ready"
+		steam_id = "460600"
+		category = "content"
+	}
+	dlc003 = {
+		name = "Rocket Launcher Unit Pack"
+		steam_id = "460559"
+		category = "unit_pack"
+	}
+	dlc004 = {
+		name = "Famous Battleships Unit Pack"
+		steam_id = "460552"
+		category = "unit_pack"
+	}
+	dlc005 = {
+		name = "Heavy Cruisers Unit Pack"
+		steam_id = "460553"
+		category = "unit_pack"
+	}
+	dlc006 = {
+		name = "Soviet Tanks Unit Pack"
+		steam_id = "460554"
+		category = "unit_pack"
+	}
+	dlc007 = {
+		name = "German Tanks Unit Pack"
+		steam_id = "460550"
+		category = "unit_pack"
+	}
+	dlc008 = {
+		name = "French Tanks Unit Pack"
+		steam_id = "460551"
+		category = "unit_pack"
+	}
+	dlc009 = {
+		name = "British Tanks Unit Pack"
+		steam_id = "460556"
+		category = "unit_pack"
+	}
+	dlc010 = {
+		name = "US Tanks Unit Pack"
+		steam_id = "460555"
+		category = "unit_pack"
+	}
+	dlc011 = {
+		name = "German March Order Music Pack"
+		steam_id = "460557"
+		category = "music"
+	}
+	dlc012 = {
+		name = "Allied Radio Music Pack"
+		steam_id = "460558"
+		category = "music"
+	}
+	dlc013 = {
+		name = "Sabaton Soundtrack"
+		steam_id = "461800"
+		category = "music"
+	}
+	dlc014 = {
+		name = "Wallpaper"
+		steam_id = "472410"
+		category = "others"
+	}
+	dlc015 = {
+		name = "Unique Wallpaper"
+		steam_id = "472411"
+		category = "others"
+	}
+	dlc016 = {
+		name = "Artbook"
+		steam_id = "473130"
+		category = "others"
+	}
+	dlc017 = {
+		name = "Original Soundtrack"
+		steam_id = "486950"
+		category = "others"
+	}
+	dlc018 = {
+		name = "Together for Victory"
+		steam_id = "530760"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc018"
+		localization_key = "TOGETHER_FOR_VICTORY"
+		career_profile_background_promotion = "GFX_bg_dlc018"
+		web_link = "https://store.steampowered.com/app/530760/Expansion__Hearts_of_Iron_IV_Together_for_Victory/"
+	}
+	dlc019 = {
+		name = "Sabaton Soundtrack Vol.2"
+		steam_id = "584141"
+		category = "music"
+	}
+	dlc020 = {
+		name = "Death or Dishonor"
+		steam_id = "584140"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc020"
+		localization_key = "DEATH_OR_DISHONOR"
+		career_profile_background_promotion = "GFX_bg_dlc020"
+		web_link = "https://store.steampowered.com/app/584140/Expansion__Hearts_of_Iron_IV_Death_or_Dishonor/"
+	}
+	dlc021 = {
+		name = "Anniversary Pack"
+		steam_id = "642010"
+		category = "content"
+	}
+	dlc022 = {
+		name = "Waking the Tiger"
+		steam_id = "702350"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc022"
+		localization_key = "WAKING_THE_TIGER"
+		career_profile_background_promotion = "GFX_bg_dlc022"
+		web_link = "https://store.steampowered.com/app/702350/Expansion__Hearts_of_Iron_IV_Waking_the_Tiger/"
+	}
+	dlc023 = {
+		name = "Man the Guns"
+		steam_id = "815460"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc023"
+		localization_key = "MAN_THE_GUNS"
+		career_profile_background_promotion = "GFX_bg_dlc023"
+		web_link = "https://store.steampowered.com/app/815460/Expansion__Hearts_of_Iron_IV_Man_the_Guns/"
+	}
+	dlc024 = {
+		name = "Man the Guns Wallpaper"
+		steam_id = "1032150"
+		category = "others"
+	}
+	dlc025 = {
+		name = "Axis Armor Pack"
+		steam_id = "1086480"
+		category = "unit_pack"
+	}
+	dlc026 = {
+		name = "Radio Pack"
+		steam_id = "1086481"
+		category = "music"
+	}
+	dlc027 = {
+		name = "La Resistance Preorder Bonus"
+		steam_id = "1206030"
+		category = "music"
+	}
+	dlc028 = {
+		name = "La Resistance"
+		steam_id = "1158100"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc028"
+		localization_key = "LA_RESISTANCE"
+		career_profile_background_promotion = "GFX_bg_dlc028"
+		web_link = "https://store.steampowered.com/app/1158100/Expansion__Hearts_of_Iron_IV_La_Rsistance/"
+	}
+	dlc029 = {
+		name = "Allied Armor Pack"
+		steam_id = "1317230"
+		category = "unit_pack"
+	}
+	dlc030 = {
+		name = "Allied Speeches Pack"
+		steam_id = "1317250"
+		category = "music"
+	}
+	dlc031 = {
+		name = "Battle for the Bosporus"
+		steam_id = "1348660"
+		category = "content"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc031"
+		localization_key = "BATTLE_FOR_THE_BOSPORUS"
+		career_profile_background_promotion = "GFX_bg_dlc031"
+		web_link = "https://store.steampowered.com/app/1348660/Country_Pack__Hearts_of_Iron_IV_Battle_for_the_Bosporus/"
+	}
+	dlc032 = {
+		name = "Eastern Front Planes Pack"
+		steam_id = "1579991"
+		category = "unit_pack"
+	}
+	dlc033 = {
+		name = "Songs of the Eastern Front"
+		steam_id = "1579992"
+		category = "music"
+	}
+	dlc034 = {
+		name = "No Step Back"
+		steam_id = "1348661"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc034"
+		localization_key = "NO_STEP_BACK"
+		career_profile_background_promotion = "GFX_bg_dlc034"
+		web_link = "https://store.steampowered.com/app/1348661/Expansion__Hearts_of_Iron_IV_No_Step_Back/"
+	}
+	dlc035 = {
+		name = "No Step Back Preorder Bonus"
+		steam_id = "1785140"
+		category = "music"
+	}
+	dlc036 = {
+		name = "By Blood Alone"
+		steam_id = "1880650"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc036"
+		localization_key = "BY_BLOOD_ALONE"
+		career_profile_background_promotion = "GFX_bg_dlc036"
+		web_link = "https://store.steampowered.com/app/1880650/Expansion__Hearts_of_Iron_IV_By_Blood_Alone/"
+	}
+	dlc037 = {
+		name = "By Blood Alone Preorder Bonus"
+		steam_id = "1880660"
+		category = "music"
+	}
+	dlc038 = {
+		name = "Arms Against Tyranny"
+		steam_id = "2183930"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc038"
+		localization_key = "ARMS_AGAINST_TYRANNY"
+		career_profile_background_promotion = "GFX_bg_dlc038"
+		web_link = "https://store.steampowered.com/app/2183930/Expansion__Hearts_of_Iron_IV_Arms_Against_Tyranny/"
+	}
+	dlc039 = {
+		name = "Arms Against Tyranny Preorder Bonus"
+		steam_id = "2280250"
+		category = "music"
+	}
+	dlc040 = {
+		name = "Trial of Allegiance"
+		steam_id = "2695150"
+		category = "content"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc040"
+		localization_key = "TRIAL_OF_ALLEGIANCE"
+		career_profile_background_promotion = "GFX_bg_dlc040"
+		web_link = "https://store.steampowered.com/app/2695150/Country_Pack__Hearts_of_Iron_IV_Trial_of_Allegiance/"
+	}
+	dlc041 = {
+		name = "Trial of Allegiance Preorder Bonus"
+		steam_id = "2786480"
+		category = "music"
+	}
+	dlc042 = {
+		name = "Content Creator Pack - Soviet Union 2D Art"
+		steam_id = "2981720"
+		category = "content"
+	}
+	dlc043 = {
+		name = "Gotterdammerung"
+		steam_id = "3152780"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc043"
+		localization_key = "GOTTERDAMMERUNG"
+		career_profile_background_promotion = "GFX_bg_dlc043"
+		web_link = "https://store.steampowered.com/app/3152780/Expansion__Hearts_of_Iron_IV_Gotterdammerung/"
+	}
+	dlc044 = {
+		name = "Expansion Pass 1: Ride of the Valkyries"
+		steam_id = "3152840"
+		category = "music"
+	}
+	dlc045 = {
+		name = "Expansion Pass 1: Supporter Pack"
+		steam_id = "3152820"
+		category = "unit_pack"
+	}
+	dlc046 = {
+		name = "Graveyard of Empires"
+		steam_id = "3152790"
+		category = "content"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc046"
+		localization_key = "GRAVEYARD_OF_EMPIRES"
+		career_profile_background_promotion = "GFX_bg_dlc046"
+		web_link = "https://store.steampowered.com/app/3152790/Country_Pack__Hearts_of_Iron_IV_Graveyard_of_Empires/"
+	}
+	dlc047 = {
+		name = "Prototype Vehicles"
+		steam_id = "3152800"
+		category = "unit_pack"
+	}
+	dlc048 = {
+		name = "Expansion Pass 2: Seaplane Tenders"
+		steam_id = "3796250"
+		category = "unit_pack"
+	}
+	dlc049 = {
+		name = "No Compromise, No Surrender"
+		steam_id = "3796260"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc049"
+		localization_key = "NO_COMPROMISE_NO_SURRENDER"
+		career_profile_background_promotion = "GFX_bg_dlc049"
+		web_link = "https://store.steampowered.com/app/3796260/Expansion__Hearts_of_Iron_IV_No_Compromise_No_Surrender/"
+	}
+	dlc050 = {
+		name = "Warships of the Pacific"
+		steam_id = "3796270"
+		category = "unit_pack"
+	}
+	dlc051 = {
+		name = "Peace For Our Time"
+		steam_id = "3757310"
+		category = "content"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc051"
+		localization_key = "PEACE_FOR_OUR_TIME"
+		career_profile_background_promotion = "GFX_bg_dlc051"
+		web_link = "https://store.steampowered.com/app/3757310/Focus_Pack__Hearts_of_Iron_IV_Peace_For_Our_Time/"
+	}
+	dlc052 = {
+		name = "Thunder at Our Gates"
+		steam_id = "3796290"
+		category = "expansion"
+		major = yes
+		description = "DLC_DESCRIPTION_dlc052"
+		localization_key = "THUNDER_AT_OUR_GATES"
+		career_profile_background_promotion = "GFX_bg_dlc052"
+		web_link = "https://store.steampowered.com/app/3796290/Theater_Pack__Hearts_of_Iron_IV_Thunder_at_our_Gates/"
+	}
+}

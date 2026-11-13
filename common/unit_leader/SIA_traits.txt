@@ -1,0 +1,20 @@
+leader_traits = {
+
+	
+##################################
+# Common Traits
+##################################
+	SIA_under_investigation = { 
+		type = all
+		trait_type = status_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+		
+		non_shared_modifier = {
+			# skill_bonus_factor = -0.33
+			# cannot_use_abilities = 1
+		}
+	}
+}

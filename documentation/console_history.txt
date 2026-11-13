@@ -1,0 +1,39 @@
+eval_effect FRA={FRA_philippe_petain={add_country_leader_role={country_leader={ideology=fascism_ideology traits={}expire="1965.1.1.1"}promote_leader=yes}}}
+eval_effect FRA={add_ideas={FRA_occupation_costs_4}set_politics={ruling_party=fascism}add_popularity={ideology=fascism popularity=1}load_focus_tree={tree=vichy_french_focus}set_country_flag={flag=vichy_france}set_cosmetic_tag=FRA_VICHY}
+instantevents
+random_seed
+collaboration 1
+pp -999999999 && xp -999999999 && cp -999999999 && cic -999999999 && AddSize -999999999 && sp_br -999999999 && fi -999999999
+sp_ra && research all
+civilwar totalist/syndicalist/radical_socialist/social_democrat/social_liberal/market_liberal/social_conservative/authoritarian_democrat/paternal_autocrat/national_populist RUS
+civilwar fascism/neutrality/democratic/communism SOV
+add_legitimacy ETH 100
+remove_ideas GER_mefo_bills_ended
+eval_effect ROOT={remove_core_of=XXX}
+eval_effect ROOT={remove_claim_by=XXX}
+eval_effect ROOT={add_core_of=XXX}
+add_core 85 DNZ
+eval_effect ROOT={uncomplete_national_focus={focus=Focusid uncomplete_children=no refund_political_power=yes mark_focus_tree_layout_dirty=yes}}
+eval_effect ROOT={unlock_national_focus=XXX}
+eval_effect every_other_country={limit={has_wargoal_against=PREV}remove_wargoal={type=all target=PREV}}
+eval_effect ROOT={add_dynamic_modifier={modifier=XXX}}
+eval_effect ROOT={drop_cosmetic_tag=yes}
+eval_effect every_subject_country={inherit_technology=ROOT}
+eval_effect ROOT={add_to_faction=XXX}
+eval_effect ROOT={complete_special_project=sp:XXX}
+eval_effect ROOT={complete_national_focus=XXX}
+set_ruling_party f/n/d/c
+add_party_popularity f/n/d/c 100
+fast_forward 1
+threat -100
+sp_add_selected_scientist_level 5 specialization_land/naval/air/nuclear
+gain_xp 999999
+eval_effect every_possible_country={limit={NOT={tag=ROOT}}ROOT={add_collaboration={target=PREV value=1}}}
+mines 1000
+decision.fastremove
+mastery 500
+fu m && fu r
+fgs short 99 && fgs medium 99 && fgs long 99 && fi 100
+cic 1000000 && AddSize 100 && sp_br 100
+pp 1000000 && xp 500000 && cp 5000 && st 200 && ws 200 && eval_effect set_fuel_ratio=1 && eval_effect ROOT={add_popularity={ideology=ROOT popularity=1}}
+debug && fow && airealism && aiview && ff && ezd && nocb && roic && sp_fast && sp_unlock_all && Agency.Instant && it && isr && ic && tp && instant_prepare && instant_wargoal && bisc && allowoperations && allowtraits && set_global_flag mlm

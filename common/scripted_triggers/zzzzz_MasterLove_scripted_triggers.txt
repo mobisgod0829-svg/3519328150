@@ -1,0 +1,23 @@
+is_mlm = {
+	has_global_flag = mlm
+	OR = {
+		FROM = {
+			is_ai = no
+		}
+		FROM.FROM = {
+			is_ai = no
+		}
+		FROM.FROM.FROM = {
+			is_ai = no
+		}
+		FROM.FROM.FROM.FROM = {
+			is_ai = no
+		}
+		FROM.FROM.FROM.FROM.FROM = {
+			is_ai = no
+		}
+		ROOT = {
+			is_ai = no
+		}
+	}
+}

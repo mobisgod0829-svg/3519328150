@@ -1,0 +1,166 @@
+Guidance_system_weapon_application_air = {
+	specialization = specialization_air 	
+	icon = GFX_sp_rockets_flying_bomb
+	project_tags = {
+		# sp_tag_aircraft
+		sp_tag_rocket
+		sp_tag_bomb
+	}
+	allowed = { has_dlc = "Gotterdammerung" }
+	available = { 
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			FROM = {
+				has_tech = sp_rockets_rocket_bomber
+			}
+		}
+	}
+	breakthrough_cost = {
+		specialization_air = 1
+	}
+	resource_cost = {
+		resources = {
+			steel = 6
+		}
+	}
+	prototype_time = 30	
+	complexity = sp_complexity.small
+    special_project_parent = {
+        sp_rockets_flying_bomb
+    }
+	project_output = {
+		country_effects = {
+			custom_effect_tooltip = Guidance_system_weapon_application_air_tt
+		}	
+		enable_equipment_modules = {
+			air_to_air_missile
+			guided_bomb
+		}	
+	}	
+	generic_prototype_rewards = {
+		sp_rockets_scientist_xp_generic_reward
+		sp_rockets_generic_major_breakthrough_reward
+		sp_rockets_generic_avionics_advancements_reward
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+	}
+}
+Guidance_system_weapon_application_ship_1 = {
+	specialization = specialization_air 	
+	icon = GFX_sp_rockets_surface_to_air_missiles 
+	project_tags = {
+		# sp_tag_aircraft
+		sp_tag_rocket
+		# sp_tag_surface_ship
+		sp_tag_bomb
+	}
+	allowed = { has_dlc = "Gotterdammerung" }
+	available = { 
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			FROM = {
+				has_tech = sp_rockets_rocket_bomber
+			}
+		}
+		
+	}
+	breakthrough_cost = { specialization_air = 1 }
+	resource_cost = {
+		resources = {
+			steel = 10
+		}
+	}
+	prototype_time = 30	
+	complexity = sp_complexity.small
+    special_project_parent = {
+        sp_rockets_flying_bomb
+    }
+	project_output = {
+		country_effects = {
+			custom_effect_tooltip = Guidance_system_weapon_application_ship_1_tt
+		}	
+		enable_equipment_modules = {
+			Basic_ship_to_ship_missile
+			Improved_ship_to_ship_missile
+			Advanced_ship_to_ship_missile
+			air_defense_missile
+		}	
+	}	
+	generic_prototype_rewards = {
+		sp_rockets_scientist_xp_generic_reward
+		sp_rockets_generic_major_breakthrough_reward
+		sp_rockets_generic_avionics_advancements_reward
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+	}
+}
+Guidance_system_weapon_application_ship_2 = {
+	specialization = specialization_air 	
+	icon = GFX_sp_rockets_ballistic_missile
+	project_tags = {
+		# sp_tag_aircraft
+		sp_tag_rocket
+		# sp_tag_surface_ship
+		sp_tag_guided_bomb
+	}
+	allowed = { has_dlc = "Gotterdammerung" }
+	available = { 
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			FROM = {
+				has_tech = sp_rockets_improved_guidance 
+			}
+		}
+	}
+	breakthrough_cost = { specialization_air = 1 }
+	resource_cost = {
+		resources = {
+			steel = 12
+			tungsten = 6
+		}
+	}
+	prototype_time = 30	
+	complexity = sp_complexity.small #large
+    special_project_parent = {
+        Guidance_system_weapon_application_ship_1
+    }
+	project_output = {
+		country_effects = {
+			custom_effect_tooltip = Guidance_system_weapon_application_ship_2_tt
+		}	
+		enable_equipment_modules = {
+			Small_high_explosive_ship_to_ship_missile
+			Large_high_explosive_ship_to_ship_missile
+			Small_armour_piercing_ship_to_ship_missile
+			Large_armour_piercing_ship_to_ship_missile
+		}	
+	}	
+	generic_prototype_rewards = {
+		sp_rockets_scientist_xp_generic_reward
+		sp_rockets_generic_major_breakthrough_reward
+		sp_rockets_generic_avionics_advancements_reward
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+	}
+}

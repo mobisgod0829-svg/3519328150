@@ -1,0 +1,62 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_ger"
+		modifier = diff_strong_ai_generic
+		countries = { GER DNZ SDL RKH SLO GEN RKN RKB RKG RKO RKU RKK RKM RKL RGB RKT RKI RKC RNA RKA RKV RAN RCO RUS RHD RAR ROA RAA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ita"
+		modifier = diff_strong_ai_generic
+		countries = { ITA AOI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_sov"
+		modifier = diff_strong_ai_generic
+		countries = { SOV MON TAN SIK DDR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_fra"
+		modifier = diff_strong_ai_generic
+		countries = { FRA HOL LUX POR YUG ROM IRE ALB RUT WGR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_eng"
+		modifier = diff_strong_ai_generic
+		countries = { ENG CAN SAF NZL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_usa"
+		modifier = diff_strong_ai_generic
+		countries = { USA USB CSA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_jap"
+		modifier = diff_strong_ai_generic
+		countries = { JAP MAN MEN RNG PSR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_chi"
+		modifier = diff_strong_ai_generic
+		countries = { CHI PRC SHX HBC SND GDC GXC YUN SIC XIC XSM NXM GSM KHM KUM }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ger_1"
+		modifier = diff_strong_ai_generic
+		countries = { PRE RHI HAN SHL WUR HES BAY THU SAX MEK SIL KSH UBD VGE LIT LAT EST BLR UKR CRI DON KUB GEO ARM AZR BRI NAV GLC SCO WLS WLA NIR KAR SMI RIF MOR VEN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ita_1"
+		modifier = diff_strong_ai_generic
+		countries = { SPM LBV PAP TOS TTS COR OCC CAT ADU SLV CRO BOS HRZ SER MNT MAC KOS TRA MOL GAL MLT CYP TUN }
+		multiplier = 2.0
+	}
+}

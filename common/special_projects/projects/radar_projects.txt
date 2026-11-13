@@ -1,0 +1,74 @@
+sp_air_radar = {
+	specialization = specialization_air
+	icon = GFX_sp_nuclear_radar
+	project_tags = sp_tag_radar
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.medium
+	breakthrough_cost = { specialization_air = 1 }
+	available = {
+		FROM = { has_tech = electronic_mechanical_engineering }
+	}
+	resource_cost = {
+		resources = {
+			steel = 6
+			aluminium = 6
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 3
+			ROOT = { is_major = yes }
+		}
+		modifier = {
+			factor = 2
+			date > 1940.1.1
+		}
+	}
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|radio_detection
+				set_technology = {
+					radio_detection = 1
+					popup = no
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = cavity_magnatron
+			}
+			add_tech_bonus = {
+				name = sp_nuclear_generic_reward_option_industry_tech_name
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = sp_nuclear_generic_reward_option_electronics_tech_bonus_name
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = sp_nuclear_generic_reward_option_electronics_tech_bonus_name
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				technology = improved_radio
+				technology = advanced_radio
+			}
+		}
+		facility_state_effects = {
+			add_building_construction = {
+				type = radar_station
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_air_scientist_xp_generic_reward
+		sp_air_generic_major_breakthrough_reward
+	}
+}

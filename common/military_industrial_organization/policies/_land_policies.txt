@@ -1,0 +1,323 @@
+mio_policy_land_armor_welding_specialists = {
+	icon = GFX_mio_policy_welding_specialists
+	allowed = {
+		OR = {
+			has_mio_equipment_type = armor
+			has_mio_equipment_type = motorized
+			has_mio_equipment_type = mechanized
+			has_mio_equipment_type = flame
+			has_mio_equipment_type = rocket
+			has_mio_equipment_type = light_tank_artillery_chassis
+			has_mio_equipment_type = medium_tank_artillery_chassis
+			has_mio_equipment_type = heavy_tank_artillery_chassis
+			has_mio_equipment_type = mio_cat_eq_all_motorized_and_mechanized_equipment
+			has_mio_equipment_type = mio_cat_eq_all_motorized_equipment
+			has_mio_equipment_type = mio_cat_eq_all_mechanized_equipment
+			has_mio_equipment_type = mio_cat_eq_all_light_tank
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank
+			has_mio_equipment_type = mio_cat_eq_all_light_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_light_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_tanks
+			has_mio_equipment_type = carrier
+			has_mio_equipment_type = ship_hull_carrier
+			has_mio_equipment_type = capital_ship
+			has_mio_equipment_type = ship_hull_heavy
+			has_mio_equipment_type = ship_hull_cruiser
+			has_mio_equipment_type = screen_ship
+			has_mio_equipment_type = ship_hull_light
+			has_mio_equipment_type = submarine
+			has_mio_equipment_type = ship_hull_submarine
+			has_mio_equipment_type = mio_cat_eq_all_carrier
+			has_mio_equipment_type = mio_cat_eq_all_cruiser
+			has_mio_equipment_type = mio_cat_eq_all_destroyer
+			has_mio_equipment_type = mio_cat_eq_all_battleship
+			has_mio_equipment_type = mio_cat_eq_all_capital_ships
+			has_mio_equipment_type = mio_cat_eq_all_screen_ships
+			has_mio_equipment_type = mio_cat_eq_all_submarine
+			has_mio_equipment_type = mio_cat_eq_all_ships_no_convoys
+			has_mio_equipment_type = support_ship
+			has_mio_equipment_type = support_ship_hull
+			has_mio_equipment_type = repair_ship_hull
+			has_mio_equipment_type = convoy
+		}
+	}
+	available = { has_mio_size > 5 }
+	equipment_bonus = {
+		same_as_mio = {
+			armor_value = 0.1
+		}
+	}
+}
+mio_policy_land_casting_specialists = {
+	icon = GFX_mio_policy_casting_specialists
+	allowed = {
+		OR = {
+			has_mio_equipment_type = armor
+			has_mio_equipment_type = motorized
+			has_mio_equipment_type = mechanized
+			has_mio_equipment_type = anti_tank
+			has_mio_equipment_type = flame
+			has_mio_equipment_type = anti_air
+			has_mio_equipment_type = artillery
+			has_mio_equipment_type = infantry
+			has_mio_equipment_type = mio_cat_eq_all_infantry_and_support_equipment
+			has_mio_equipment_type = mio_cat_eq_all_support_equipment
+			has_mio_equipment_type = mio_cat_eq_all_artillery
+			has_mio_equipment_type = mio_cat_eq_only_artillery
+			has_mio_equipment_type = light_tank_artillery_chassis
+			has_mio_equipment_type = medium_tank_artillery_chassis
+			has_mio_equipment_type = heavy_tank_artillery_chassis
+			has_mio_equipment_type = mio_cat_eq_all_motorized_and_mechanized_equipment
+			has_mio_equipment_type = mio_cat_eq_all_motorized_equipment
+			has_mio_equipment_type = mio_cat_eq_all_mechanized_equipment
+			has_mio_equipment_type = mio_cat_eq_all_light_tank
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank
+			has_mio_equipment_type = mio_cat_eq_all_light_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_light_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_tank_artillery
+			has_mio_equipment_type = mio_cat_eq_all_tank_destroyers
+			has_mio_equipment_type = mio_cat_eq_all_tanks
+		}
+	}
+	available = { has_mio_size > 5 }
+	equipment_bonus = {
+		same_as_mio = {
+			hardness = 0.05
+		}
+	}
+}
+mio_policy_land_heavy_gantry_cranes = {
+	icon = GFX_mio_policy_heavy_gantry_cranes_land
+	allowed = {
+		OR = {
+			has_mio_equipment_type = armor
+			has_mio_equipment_type = mechanized
+			has_mio_equipment_type = anti_tank
+			has_mio_equipment_type = flame
+			has_mio_equipment_type = railway_gun
+			has_mio_equipment_type = train
+			has_mio_equipment_type = mio_cat_eq_all_medium_tank
+			has_mio_equipment_type = mio_cat_eq_all_heavy_tank
+			has_mio_equipment_type = mio_cat_eq_all_artillery
+			has_mio_equipment_type = mio_cat_eq_only_artillery
+		}
+	}
+	available = { has_mio_size > 5 }
+	equipment_bonus = {
+		mio_cat_eq_all_heavy_tank = {
+			production_efficiency_cap_factor = 0.05
+		}
+		super_heavy_tank_chassis = {
+			production_efficiency_cap_factor = 0.05
+		}
+		land_cruiser_chassis = {
+			production_efficiency_cap_factor = 0.05
+		}
+		train_equipment = {
+			production_efficiency_cap_factor = 0.05
+		}
+		railway_gun = {
+			production_efficiency_cap_factor = 0.05
+		}
+		# super_heavy_railway_gun = {
+		# 	production_efficiency_cap_factor = 0.05
+		# }
+		super_heavy_artillery_equipment = {
+			production_efficiency_cap_factor = 0.05
+		}
+		self_propelled_super_heavy_artillery_equipment = {
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+}
+mio_policy_land_factory_applied_camouflage = {
+	icon = GFX_mio_policy_factory_applied_camouflage
+	allowed = {
+		NOT = {
+			has_mio_equipment_type = carrier
+			has_mio_equipment_type = ship_hull_carrier
+			has_mio_equipment_type = capital_ship
+			has_mio_equipment_type = ship_hull_heavy
+			has_mio_equipment_type = ship_hull_cruiser
+			has_mio_equipment_type = screen_ship
+			has_mio_equipment_type = ship_hull_light
+			has_mio_equipment_type = submarine
+			has_mio_equipment_type = ship_hull_submarine
+			has_mio_equipment_type = mio_cat_eq_all_carrier
+			has_mio_equipment_type = mio_cat_eq_all_cruiser
+			has_mio_equipment_type = mio_cat_eq_all_destroyer
+			has_mio_equipment_type = mio_cat_eq_all_battleship
+			has_mio_equipment_type = mio_cat_eq_all_capital_ships
+			has_mio_equipment_type = mio_cat_eq_all_screen_ships
+			has_mio_equipment_type = mio_cat_eq_all_submarine
+			has_mio_equipment_type = mio_cat_eq_all_ships_no_convoys
+			has_mio_equipment_type = support_ship
+			has_mio_equipment_type = support_ship_hull
+			has_mio_equipment_type = repair_ship_hull
+			has_mio_equipment_type = convoy
+			has_mio_equipment_type = small_plane_airframe
+			has_mio_equipment_type = small_plane_cas_airframe
+			has_mio_equipment_type = small_plane_naval_bomber_airframe
+			has_mio_equipment_type = small_plane_suicide_airframe
+			has_mio_equipment_type = cv_small_plane_airframe
+			has_mio_equipment_type = cv_small_plane_cas_airframe
+			has_mio_equipment_type = cv_small_plane_naval_bomber_airframe
+			has_mio_equipment_type = cv_small_plane_suicide_airframe
+			has_mio_equipment_type = medium_plane_airframe
+			has_mio_equipment_type = medium_plane_fighter_airframe
+			has_mio_equipment_type = medium_plane_scout_plane_airframe
+			has_mio_equipment_type = large_plane_airframe
+			has_mio_equipment_type = large_plane_maritime_patrol_plane_airframe
+			has_mio_equipment_type = transport_plane_equipment
+			has_mio_equipment_type = jet_fighter_equipment
+			has_mio_equipment_type = jet_tac_bomber_equipment
+			has_mio_equipment_type = jet_strat_bomber_equipment
+			has_mio_equipment_type = rocket_interceptor_equipment
+			has_mio_equipment_type = guided_missile_equipment
+			has_mio_equipment_type = ballistic_missile_equipment
+			has_mio_equipment_type = sam_missile_equipment
+			has_mio_equipment_type = nuclear_missile_equipment
+			has_mio_equipment_type = mothership_equipment
+			has_mio_equipment_type = strat_bomber_intercontinental_equipment
+			has_mio_equipment_type = mio_cat_eq_all_small_plane
+			has_mio_equipment_type = mio_cat_eq_all_medium_plane
+			has_mio_equipment_type = mio_cat_eq_all_large_plane
+			has_mio_equipment_type = mio_cat_eq_all_cv_aircraft
+			has_mio_equipment_type = mio_cat_eq_only_light_fighter
+			has_mio_equipment_type = mio_cat_eq_only_light_cas
+			has_mio_equipment_type = mio_cat_eq_only_light_nav
+			has_mio_equipment_type = mio_cat_eq_only_light_fighter_no_cv
+			has_mio_equipment_type = mio_cat_eq_only_light_fighter_and_CAS_no_cv
+			has_mio_equipment_type = mio_cat_eq_only_tactical_bomber
+			has_mio_equipment_type = mio_cat_eq_only_heavy_fighter
+			has_mio_equipment_type = mio_cat_eq_only_scout_plane
+			has_mio_equipment_type = mio_cat_eq_only_strategic_bomber
+			has_mio_equipment_type = mio_cat_eq_only_maritime_patrol_plane
+			has_mio_equipment_type = fighter
+			has_mio_equipment_type = cas
+			has_mio_equipment_type = naval_bomber
+			has_mio_equipment_type = suicide
+			has_mio_equipment_type = tactical_bomber
+			has_mio_equipment_type = heavy_fighter
+			has_mio_equipment_type = scout_plane
+			has_mio_equipment_type = strategic_bomber
+			has_mio_equipment_type = maritime_patrol_plane
+			has_mio_equipment_type = interceptor
+			has_mio_equipment_type = air_transport
+			has_mio_equipment_type = missile
+			has_mio_equipment_type = ballistic_missile
+			has_mio_equipment_type = sam_missile
+			has_mio_equipment_type = nuclear_missile
+		}
+	}
+	available = { has_mio_size > 5 }
+	equipment_bonus = {
+		same_as_mio = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+	}
+}
+mio_policy_land_cutting_corners = {
+	icon = GFX_mio_policy_cutting_corners
+	allowed = {
+		NOT = {
+			has_mio_equipment_type = carrier
+			has_mio_equipment_type = ship_hull_carrier
+			has_mio_equipment_type = capital_ship
+			has_mio_equipment_type = ship_hull_heavy
+			has_mio_equipment_type = ship_hull_cruiser
+			has_mio_equipment_type = screen_ship
+			has_mio_equipment_type = ship_hull_light
+			has_mio_equipment_type = submarine
+			has_mio_equipment_type = ship_hull_submarine
+			has_mio_equipment_type = mio_cat_eq_all_carrier
+			has_mio_equipment_type = mio_cat_eq_all_cruiser
+			has_mio_equipment_type = mio_cat_eq_all_destroyer
+			has_mio_equipment_type = mio_cat_eq_all_battleship
+			has_mio_equipment_type = mio_cat_eq_all_capital_ships
+			has_mio_equipment_type = mio_cat_eq_all_screen_ships
+			has_mio_equipment_type = mio_cat_eq_all_submarine
+			has_mio_equipment_type = mio_cat_eq_all_ships_no_convoys
+			has_mio_equipment_type = support_ship
+			has_mio_equipment_type = support_ship_hull
+			has_mio_equipment_type = repair_ship_hull
+			has_mio_equipment_type = convoy
+			has_mio_equipment_type = small_plane_airframe
+			has_mio_equipment_type = small_plane_cas_airframe
+			has_mio_equipment_type = small_plane_naval_bomber_airframe
+			has_mio_equipment_type = small_plane_suicide_airframe
+			has_mio_equipment_type = cv_small_plane_airframe
+			has_mio_equipment_type = cv_small_plane_cas_airframe
+			has_mio_equipment_type = cv_small_plane_naval_bomber_airframe
+			has_mio_equipment_type = cv_small_plane_suicide_airframe
+			has_mio_equipment_type = medium_plane_airframe
+			has_mio_equipment_type = medium_plane_fighter_airframe
+			has_mio_equipment_type = medium_plane_scout_plane_airframe
+			has_mio_equipment_type = large_plane_airframe
+			has_mio_equipment_type = large_plane_maritime_patrol_plane_airframe
+			has_mio_equipment_type = transport_plane_equipment
+			has_mio_equipment_type = jet_fighter_equipment
+			has_mio_equipment_type = jet_tac_bomber_equipment
+			has_mio_equipment_type = jet_strat_bomber_equipment
+			has_mio_equipment_type = rocket_interceptor_equipment
+			has_mio_equipment_type = guided_missile_equipment
+			has_mio_equipment_type = ballistic_missile_equipment
+			has_mio_equipment_type = sam_missile_equipment
+			has_mio_equipment_type = nuclear_missile_equipment
+			has_mio_equipment_type = mothership_equipment
+			has_mio_equipment_type = strat_bomber_intercontinental_equipment
+			has_mio_equipment_type = mio_cat_eq_all_small_plane
+			has_mio_equipment_type = mio_cat_eq_all_medium_plane
+			has_mio_equipment_type = mio_cat_eq_all_large_plane
+			has_mio_equipment_type = mio_cat_eq_all_cv_aircraft
+			has_mio_equipment_type = mio_cat_eq_only_light_fighter
+			has_mio_equipment_type = mio_cat_eq_only_light_cas
+			has_mio_equipment_type = mio_cat_eq_only_light_nav
+			has_mio_equipment_type = mio_cat_eq_only_light_fighter_no_cv
+			has_mio_equipment_type = mio_cat_eq_only_light_fighter_and_CAS_no_cv
+			has_mio_equipment_type = mio_cat_eq_only_tactical_bomber
+			has_mio_equipment_type = mio_cat_eq_only_heavy_fighter
+			has_mio_equipment_type = mio_cat_eq_only_scout_plane
+			has_mio_equipment_type = mio_cat_eq_only_strategic_bomber
+			has_mio_equipment_type = mio_cat_eq_only_maritime_patrol_plane
+			has_mio_equipment_type = fighter
+			has_mio_equipment_type = cas
+			has_mio_equipment_type = naval_bomber
+			has_mio_equipment_type = suicide
+			has_mio_equipment_type = tactical_bomber
+			has_mio_equipment_type = heavy_fighter
+			has_mio_equipment_type = scout_plane
+			has_mio_equipment_type = strategic_bomber
+			has_mio_equipment_type = maritime_patrol_plane
+			has_mio_equipment_type = interceptor
+			has_mio_equipment_type = air_transport
+			has_mio_equipment_type = missile
+			has_mio_equipment_type = ballistic_missile
+			has_mio_equipment_type = sam_missile
+			has_mio_equipment_type = nuclear_missile
+		}
+	}
+	available = { has_mio_size > 5 }
+	equipment_bonus = {
+		same_as_mio = {
+			build_cost_ic = -0.1
+			# reliability = -0.05
+			# soft_attack = -0.05
+			# hard_attack = -0.05
+			# armor_value = -0.05
+		}
+	}
+}

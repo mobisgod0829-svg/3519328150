@@ -1,0 +1,8 @@
+﻿l_german:
+  army_spirit_0: "$army_spirit$"
+  navy_spirit_0: "$navy_spirit$"
+  air_force_spirit_0: "$air_force_spirit$"
+  faction_peace_annex_all: "$USA_global_hegemony$"
+  joining_rule_no_ideology_restriction: "$CAN_JOIN_OPPOSITE_FACTIONS$"
+  RULE_GROUP_NEW_SETUP: "Operative Slots"
+  operative_slot_idea_dyn: "From industry"

@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					date < 1939.1.1
+				}
+				URG = {
+					add_ideas = league_of_nations_member_idea
+				}
+			}
+		}
+	}
+}

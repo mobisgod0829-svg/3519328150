@@ -1,0 +1,1458 @@
+sp_land_flamethrower_tank = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_tank
+	ai_will_do = { base = 1 }
+	allowed = { has_dlc = "No Step Back" }
+	available = {
+		FROM = {
+			has_tech = tech_engineers
+		}
+	}
+	breakthrough_cost = { specialization_land = 1 }
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		enable_equipment_modules = {
+			flamethrower
+		}
+		enable_equipment_modules = {
+			limit = { has_dlc = "Gotterdammerung" }
+			lc_flamethrower_turret
+		}
+		enable_subunits = {
+			light_flame_tank
+			medium_flame_tank
+			heavy_flame_tank
+		}
+		country_effects = {
+			hidden_effect = { #Update tooltip in Italian focus if anything changes here!!! (maybe change focus effects too if Italy starts with Flamethrower Tank)
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+						original_tag = ITA
+						has_completed_focus = ITA_italian_tankettes
+					}
+					ITA_add_basic_light_flamethrower_template = yes
+				}
+			}
+			add_design_template_bonus = {
+				name = sp_land_flamethrower_tank
+				uses = 1
+				cost_factor = 1
+				equipment = light_tank_flame_chassis
+				equipment = medium_tank_flame_chassis
+				equipment = heavy_tank_flame_chassis
+			}
+			add_design_template_bonus = {
+				name = sp_land_flamethrower_tank
+				uses = 2
+				cost_factor = 0.5
+				equipment = light_tank_flame_chassis
+				equipment = medium_tank_flame_chassis
+				equipment = heavy_tank_flame_chassis
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_advanced_flamethrower_tech
+			}
+			add_equipment_bonus = {
+				name = sp_land_generic_reward_armor_bonus_3
+				bonus = {
+					armor = {
+						armor_value = 0.04
+						hardness = 0.04
+						instant = yes
+					}
+				}
+			}
+			FROM = { set_project_flag = sp_land_generic_reward_armor_bonus_flag }
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+}
+sp_land_military_engineering_vehicles = {
+	specialization = specialization_land
+	project_tags = sp_tag_tank
+	available = {
+		FROM = {
+			has_tech = tech_engineers
+		}
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	breakthrough_cost = { specialization_land = 1 }
+	project_output = {
+		enable_equipments = {
+			armored_support_vehicle_1
+		}
+		enable_subunits = {
+			assault_engineer
+		}
+		country_effects = {
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+				SP_create_variant_based_on_country_assault_engineer = yes
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_engineer_tech
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_maintenance_tech
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_signal_tech
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_motorized_military_police_tech
+			}
+			add_equipment_bonus = {
+				name = sp_land_generic_reward_engine_bonus_3
+				bonus = {
+					armor = {
+						maximum_speed = 0.06
+						reliability = 0.06
+						instant = yes
+					}
+				}
+			}
+			FROM = { set_project_flag = sp_land_generic_reward_engine_bonus_flag }
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+}
+sp_land_land_cruiser = {
+	specialization = specialization_land
+	project_tags = sp_tag_tank
+	allowed = { has_dlc = "Gotterdammerung" }
+	available = {
+		if = {
+			limit = { has_dlc = "No Step Back" }
+			FROM = {
+				has_tech = super_heavy_tank_chassis
+			}
+		}
+		else = {
+			FROM = {
+				has_tech = super_heavy_tank
+			}
+		}
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.insane
+	breakthrough_cost = { specialization_land = 3 }
+	resource_cost = {
+		resources = {
+			steel = 16
+			chromium = 8
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			OR = {
+				ROOT = { is_major = no } # Pointless unless we are big enough to do this
+				ROOT = { has_government = democratic }# Don't spend the tax payers' money on this, then they won't vote for you again
+			}
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				original_tag = GER
+				has_government = fascism
+			}
+			date > 1943.6.1
+		}
+	}
+	project_output = {
+		enable_equipments = {
+			limit = { has_dlc = "No Step Back" }
+			land_cruiser_chassis_1
+		}
+		enable_equipments = {
+			limit = { NOT = { has_dlc = "No Step Back" } }
+			land_cruiser_equipment_1
+		}
+		enable_equipment_modules = {
+			limit = { has_dlc = "No Step Back" }
+			lc_heavy_naval_guns
+			lc_medium_naval_guns
+			lc_super_heavy_howitzer
+			lc_aircraft_catapult
+			lc_internal_fuel_tanks
+			lc_internal_ammunition_compartments
+			lc_wet_ammunition_storage
+			lc_smoke_generators
+			lc_stabilizers
+		}
+		enable_subunits = {
+			land_cruiser
+		}
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_lc_naval_engine_conversion_tech
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_lc_transmission_improvements_tech
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_lc_specialized_field_manuals_tech
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_armored_lc_weapon_fire_control_tech
+			}
+			add_tech_bonus = {
+				name = sp_land_generic_reward_option_armor_tech_bonus_name
+				bonus = 2
+				ahead_reduction = 2
+				uses = 2
+				category = armor
+			}
+			FROM = { set_project_flag = sp_land_generic_reward_armor_tech_flag }
+			if = {
+				limit = { has_dlc = "No Step Back" }
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_TECH
+					TECH = sp_armored_lc_high_impact_obliterator_cannon_tech
+				}
+				add_design_template_bonus = {
+					name = sp_land_land_cruiser
+					uses = 1
+					cost_factor = 1
+					equipment = land_cruiser_chassis_1
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_chassis_redesign
+					bonus = {
+						land_cruiser_chassis_1 = {
+							reliability = 0.05
+							armor_value = 0.05
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_engine_new
+					bonus = {
+						land_cruiser_chassis_1 = {
+							reliability = 0.05
+							maximum_speed = 0.1
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_turret_redesign
+					bonus = {
+						land_cruiser_chassis_1 = {
+							breakthrough = 0.03
+							maximum_speed = 0.03
+							build_cost_ic = -0.02
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_track_reinforce_track
+					bonus = {
+						land_cruiser_chassis_1 = {
+							reliability = 0.05
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_communication_redesign
+					bonus = {
+						land_cruiser_chassis_1 = {
+							breakthrough = 0.06
+							defense = 0.03
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_assembly_all
+					bonus = {
+						land_cruiser_chassis_1 = {
+							reliability = 0.1
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_suspension_full
+					bonus = {
+						land_cruiser_chassis_1 = {
+							maximum_speed = 0.03
+							reliability = 0.06
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_ammunition_new
+					bonus = {
+						land_cruiser_chassis_1 = {
+							breakthrough = 0.08
+							reliability = 0.03
+							instant = yes
+						}
+					}
+				}
+			}
+			else = {
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_chassis_redesign
+					bonus = {
+						land_cruiser_equipment_1 = {
+							reliability = 0.05
+							armor_value = 0.05
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_engine_new
+					bonus = {
+						land_cruiser_equipment_1 = {
+							reliability = 0.05
+							maximum_speed = 0.1
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_turret_redesign
+					bonus = {
+						land_cruiser_equipment_1 = {
+							breakthrough = 0.03
+							maximum_speed = 0.03
+							build_cost_ic = -0.02
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_track_reinforce_track
+					bonus = {
+						land_cruiser_equipment_1 = {
+							reliability = 0.05
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_communication_redesign
+					bonus = {
+						land_cruiser_equipment_1 = {
+							breakthrough = 0.06
+							defense = 0.03
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_assembly_all
+					bonus = {
+						land_cruiser_equipment_1 = {
+							reliability = 0.1
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_suspension_full
+					bonus = {
+						land_cruiser_equipment_1 = {
+							maximum_speed = 0.03
+							reliability = 0.06
+							instant = yes
+						}
+					}
+				}
+				add_equipment_bonus = {
+					name = sp_land_reward_option_land_cruiser_ammunition_new
+					bonus = {
+						land_cruiser_equipment_1 = {
+							breakthrough = 0.08
+							reliability = 0.03
+							instant = yes
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = land_cruiser_equipment_1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = land_cruiser_equipment_1
+					}
+					requested_factories = 1 #optional
+					progress = 0.35 #optional
+					amount = 1
+					efficiency = 30
+				}
+			}
+		}
+		#enable_equipment_modules = {
+		#	limit = { has_dlc = "No Step Back" }
+		#	lc_heavy_naval_guns
+		#	lc_super_heavy_railway_gun
+		#	lc_high_impact_obliterator_cannon
+		#	lc_heavy_anti_air_platform
+		#	lc_medium_naval_guns
+		#	lc_hull_mounted_railway_gun
+		#	lc_super_heavy_howitzer
+		#	lc_heavy_high_velocity_cannons
+		#	lc_heavy_anti_air_battery
+		#	lc_medium_cannon_turret
+		#	lc_assault_gun
+		#	lc_high_velocity_cannon_turret
+		#	lc_light_anti_air_battery
+		#	lc_flamethrower_turret
+		#	lc_rocket_launcher
+		#	lc_radio_1
+		#	lc_radio_2
+		#	lc_radio_3
+		#	lc_command_center
+		#	lc_radar
+		#	lc_aircraft_catapult
+		#	lc_helipad
+		#	lc_armored_skirts
+		#	lc_bunker_emplacement
+		#	lc_obstacle_clearance_gear
+		#	lc_internal_fuel_tanks
+		#	lc_internal_ammunition_compartments
+		#	lc_wet_ammunition_storage
+		#	lc_smoke_generators
+		#	lc_stabilizers
+		#}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+	unique_prototype_rewards = {
+		sp_land_reward_land_cruiser_overheating = {
+			fire_only_once = yes
+			threshold = {
+				min = 0
+				max = 100
+			}
+			weight = {
+				base = 1
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_overheating
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_chassis = {
+			fire_only_once = yes
+			threshold = {
+				min = 20
+				max = 70
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_chassis_redesign
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_chassis_reinforce
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_chassis_lighter_materials
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_engine = {
+			fire_only_once = yes
+			threshold = {
+				min = 20
+				max = 70
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_engine_leave
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_engine_modify
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_engine_new
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_turret = {
+			fire_only_once = yes
+			threshold = {
+				min = 50
+				max = 100
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_turret_original
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_turret_simplify
+				default = yes
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_turret_redesign
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_track = {
+			fire_only_once = yes
+			threshold = {
+				min = 30
+				max = 80
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_track_current
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_track_reduce_armor
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_track_reinforce_track
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_communication = {
+			fire_only_once = yes
+			threshold = {
+				min = 60
+				max = 100
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_communication_current
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_communication_new
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_communication_redesign
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_assembly = {
+			fire_only_once = yes
+			threshold = {
+				min = 20
+				max = 60
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_assembly_all
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_assembly_key
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_suspension = {
+			fire_only_once = yes
+			threshold = {
+				min = 30
+				max = 100
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_suspension_full
+				default = yes
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_suspension_rear
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_land_cruiser_ammunition = {
+			fire_only_once = yes
+			threshold = {
+				min = 50
+				max = 100
+			}
+			weight = {
+				base = 4
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_ammunition_current
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_ammunition_simplified
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_land_cruiser_ammunition_new
+				iteration_output = {}
+			}
+		}
+	}
+}
+sp_land_super_heavy_howitzer = {
+	specialization = specialization_land
+	project_tags = sp_tag_artillery
+	allowed = { has_dlc = "Gotterdammerung" }
+	available = {
+		FROM = {
+			has_tech = gw_artillery
+		}
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.medium
+	breakthrough_cost = { specialization_land = 2 }
+	resource_cost = {
+		resources = {
+			steel = 8
+			tungsten = 4
+		}
+	}
+	project_output = {
+		enable_subunits = {
+			super_heavy_artillery
+		}
+		enable_equipments = {
+			super_heavy_artillery_equipment_1
+		}
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH_WITH_EXTRA_TECH
+				TECH = sp_artillery_rocket_assisted_projectiles_tech
+				EXTRA_TECH = experimental_rockets
+			}
+			add_equipment_bonus = {
+				name = sp_land_reward_option_super_heavy_howitzer_focus_preference_firepower
+				bonus = {
+					super_heavy_artillery_equipment_1 = {
+						build_cost_ic = -0.15
+						soft_attack = 0.05
+						additional_collateral_damage = 0.1
+						instant = yes
+					}
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+	unique_prototype_rewards = {
+		sp_land_reward_super_heavy_howitzer_focus_preference = {
+			fire_only_once = yes
+			threshold = {
+				min = 30
+				max = 100
+			}
+			weight = {
+				base = 50
+			}
+			option = {
+				token = sp_land_reward_option_super_heavy_howitzer_focus_preference_balance
+				default = yes
+				iteration_output = {
+					country_effects = {
+						custom_effect_tooltip = {
+							localization_key = generic_no_effects_to_equipment_tt
+							EQUIPMENT = super_heavy_artillery_equipment_1
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_super_heavy_howitzer_focus_preference_firepower
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_super_heavy_howitzer_focus_preference_production
+				iteration_output = {}
+			}
+		}
+	}
+}
+sp_land_self_propelled_super_heavy_howitzer = {
+	specialization = specialization_land
+	project_tags = sp_tag_artillery
+	allowed = { has_dlc = "Gotterdammerung" }
+	special_project_parent = {
+		sp_land_military_engineering_vehicles
+		sp_land_super_heavy_howitzer
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.medium
+	breakthrough_cost = { specialization_land = 2 }
+	resource_cost = {
+		resources = {
+			steel = 8
+			tungsten = 6
+			chromium = 2
+		}
+	}
+	project_output = {
+		enable_subunits = {
+			self_propelled_super_heavy_artillery
+		}
+		enable_equipments = {
+			self_propelled_super_heavy_artillery_equipment_1
+		}
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_artillery_purpose_built_gun_motor_carriages_tech
+			}
+			add_equipment_bonus = {
+				name = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_firepower
+				bonus = {
+					self_propelled_super_heavy_artillery_equipment_1 = {
+						build_cost_ic = -0.15
+						soft_attack = 0.05
+						additional_collateral_damage = 0.1
+						instant = yes
+					}
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+	unique_prototype_rewards = {
+		sp_land_reward_self_propelled_super_heavy_howitzer_focus_preference = {
+			fire_only_once = yes
+			threshold = {
+				min = 30
+				max = 100
+			}
+			weight = {
+				base = 50
+			}
+			option = {
+				token = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_balance
+				default = yes
+				iteration_output = {
+					country_effects = {
+						custom_effect_tooltip = {
+							localization_key = generic_no_effects_to_equipment_tt
+							EQUIPMENT = self_propelled_super_heavy_artillery_equipment_1
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_firepower
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_production
+				iteration_output = {}
+			}
+		}
+	}
+}
+sp_land_super_heavy_railway_gun = {
+	specialization = specialization_land
+	project_tags = sp_tag_artillery
+	allowed = { has_dlc = "No Step Back" }
+	available = {
+		FROM = {
+			has_tech = railway_gun
+		}
+	}
+	prototype_time = sp_time.prototype.long
+	complexity = sp_complexity.medium
+	breakthrough_cost = { specialization_land = 1 }
+	resource_cost = {
+		resources = {
+			steel = 16
+			tungsten = 8
+			chromium = 8
+		}
+	}
+	project_output = {
+		enable_equipments = {
+			super_heavy_railway_gun_equipment_1
+		}
+		enable_subunits = {
+			super_heavy_railway_gun
+		}
+		enable_equipment_modules = {
+			limit = { has_dlc = "Gotterdammerung" }
+			lc_super_heavy_railway_gun
+		}
+		country_effects = {
+			if = {
+				limit = { original_tag = GER }
+				create_railway_gun = {
+					equipment = super_heavy_railway_gun_equipment_1
+					name = "Dora"
+				}
+			}
+			else = {
+				create_railway_gun = {
+					equipment = super_heavy_railway_gun_equipment_1
+				}
+			}
+			add_equipment_bonus = {
+				name = sp_land_generic_reward_artillery_bonus_3
+				bonus = {
+					artillery = {
+						soft_attack = 0.04
+						instant = yes
+					}
+					anti_tank = {
+						hard_attack = 0.04
+						instant = yes
+					}
+					anti_air = {
+						air_attack = 0.04
+						instant = yes
+					}
+				}
+			}
+			FROM = { set_project_flag = sp_land_generic_reward_artillery_bonus_flag }
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+}
+sp_land_multi_charge_large_caliber_gun = {
+	specialization = specialization_land
+	project_tags = sp_tag_artillery
+	allowed = { has_dlc = "Gotterdammerung" }
+	special_project_parent = {
+		sp_land_super_heavy_howitzer
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.small
+	breakthrough_cost = { specialization_land = 1 }
+	resource_cost = {
+		resources = {
+			steel = 6
+			tungsten = 4
+			chromium = 2
+		}
+	}
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SP_UNLOCK_BUILDING_ICON_DESC
+					BUILDING = mega_gun_emplacement
+					BUILDING_DESCRIPTION = mega_gun_emplacement_desc
+					ICON_FRAME = 24
+				}
+				set_technology = {
+					land_multi_charge_large_caliber_gun_tech = 1
+					popup = no
+				}
+			}
+			add_tech_bonus = {
+				name = sp_land_generic_reward_option_artillery_tech_bonus_name
+				bonus = 2
+				ahead_reduction = 2
+				uses = 2
+				category = mio_cat_artillery
+			}
+			FROM = { set_project_flag = sp_land_generic_reward_artillery_tech_flag }
+		}
+		scientist_effects = {
+			add_scientist_xp = {
+				experience = constant:sp_scientist_xp_gain.medium
+				specialization = specialization_land
+			}
+			add_scientist_trait = scientist_trait_fast_learner
+			add_scientist_trait = scientist_trait_bright
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+	unique_prototype_rewards = {
+		sp_land_reward_multi_charge_large_caliber_gun_successful_test_firing = {
+			fire_only_once = yes
+			threshold = {
+				min = 0
+				max = 70
+			}
+			weight = {
+				base = 5
+			}
+			option = {
+				token = sp_land_reward_option_multi_charge_large_caliber_gun_successful_test_firing
+				iteration_output = {
+					country_effects = {
+						FROM = { add_project_progress_ratio = constant:sp_progress.gain.medium }
+					}
+				}
+			}
+		}
+		sp_land_reward_multi_charge_large_caliber_gun_test_failure = {
+			fire_only_once = yes
+			threshold = {
+				min = 0
+				max = 70
+			}
+			weight = {
+				base = 1
+			}
+			option = {
+				token = sp_land_reward_option_multi_charge_large_caliber_gun_test_failure
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_multi_charge_large_caliber_gun_breakthrough_in_propulsion_technology = {
+			fire_only_once = yes
+			threshold = {
+				min = 60
+				max = 100
+			}
+			weight = {
+				base = 2
+			}
+			option = {
+				token = sp_land_reward_option_multi_charge_large_caliber_gun_breakthrough_in_propulsion_technology
+				iteration_output = {
+					country_effects = {
+						FROM = { add_project_progress_ratio = constant:sp_progress.gain.high }
+						add_breakthrough_progress = {
+							specialization = specialization_land
+							value = sp_breakthrough_progress.low
+						}
+					}
+				}
+			}
+		}
+	}
+}
+sp_land_stronghold_network = {
+	specialization = specialization_land
+	project_tags = sp_tag_artillery
+	allowed = { has_dlc = "Gotterdammerung" }
+	available = {
+		FROM = {
+			has_tech = basic_fortification_tech
+		}
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.large
+	breakthrough_cost = { specialization_land = 2 }
+	resource_cost = {
+		resources = {
+			steel = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	project_output = {
+		scientist_effects = {
+			add_scientist_xp = {
+				experience = constant:sp_scientist_xp_gain.very_high
+				specialization = specialization_land
+			}
+		}
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SP_UNLOCK_BUILDING_ICON_DESC
+					BUILDING = stronghold_network
+					BUILDING_DESCRIPTION = stronghold_network_desc
+					ICON_FRAME = 23
+				}
+				set_technology = {
+					stronghold_network_tech = 1
+					popup = no
+				}
+			}
+			add_tech_bonus = {
+				name = sp_land_reward_stronghold_network_underground_rail_systems
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				category = engineers_tech
+			}
+			add_tech_bonus = {
+				name = sp_land_reward_stronghold_network_communication_system_overhaul
+				bonus = 2
+				ahead_reduction = 2
+				uses = 2
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = sp_land_reward_stronghold_network_breakthrough_in_concrete_reinforcement_01
+				bonus = 2
+				ahead_reduction = 2
+				uses = 2
+				category = cat_fortification
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+	unique_prototype_rewards = {
+		sp_land_reward_stronghold_network_structural_weakness_discovered = {
+			fire_only_once = yes
+			threshold = {
+				min = 20
+				max = 70
+			}
+			weight = {
+				base = 1
+				modifier = {
+					factor = 0
+					has_project_flag = sp_land_stronghold_network_structural_weakness_discovered_flag #Used in other unique rewards to prevent multiple structural failures
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_structural_weakness_discovered
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							set_project_flag = sp_land_stronghold_network_structural_weakness_discovered_flag #Used in other unique rewards to prevent multiple structural failures
+						}
+					}
+				}
+			}
+		}
+		sp_land_reward_stronghold_network_delayed_by_concrete_shortage = {
+			fire_only_once = yes
+			threshold = {
+				min = 0
+				max = 90
+			}
+			weight = {
+				base = 1
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_delayed_by_concrete_shortage
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_stronghold_network_underground_rail_systems = {
+			fire_only_once = yes
+			threshold = {
+				min = 30
+				max = 100
+			}
+			weight = {
+				base = 2
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_delayed_by_concrete_shortage
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+						}
+					}
+				}
+			}
+		}
+		sp_land_reward_stronghold_network_integration_of_anti_blast_doors = {
+			fire_only_once = yes
+			threshold = {
+				min = 30
+				max = 100
+			}
+			weight = {
+				base = 2
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_integration_of_anti_blast_doors
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+						}
+					}
+				}
+			}
+		}
+		sp_land_reward_stronghold_network_communication_system_overhaul = {
+			fire_only_once = yes
+			threshold = {
+				min = 50
+				max = 100
+			}
+			weight = {
+				base = 5
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_communication_system_overhaul_standardize
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_communication_system_overhaul_further_study
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_stronghold_network_leadership_approach = {
+			fire_only_once = yes
+			threshold = {
+				min = 0
+				max = 100
+			}
+			force_reward_if_available = yes
+			weight = {
+				base = 100 #Weight is still checked when more than 1 reward are supposed to be forced at the same time
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_leadership_approach_oversee_work_personally
+				iteration_output = {
+					country_effects = {
+						add_breakthrough_progress = {
+							specialization = specialization_land
+							value = sp_breakthrough_progress.low
+						}
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+							set_project_flag = sp_land_reward_stronghold_network_leadership_approach_field_flag #Unlocks possible specific rewards
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_leadership_approach_office_planning
+				iteration_output = {
+					country_effects = {
+						add_breakthrough_progress = {
+							specialization = specialization_land
+							value = sp_breakthrough_progress.low
+						}
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+							set_project_flag = sp_land_reward_stronghold_network_leadership_approach_office_flag #Unlocks possible specific rewards
+						}
+					}
+				}
+			}
+		}
+		sp_land_reward_stronghold_network_breakthrough_in_concrete_reinforcement_01 = { #Scientist working from Office
+			fire_only_once = yes
+			threshold = {
+				min = 50
+				max = 100
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 15
+					has_project_flag = sp_land_reward_stronghold_network_leadership_approach_field_flag
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_breakthrough_in_concrete_reinforcement_01_apply_and_document_discovery
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.high
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_breakthrough_in_concrete_reinforcement_01_use_in_current_project
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.high
+						}
+					}
+				}
+			}
+		}
+		sp_land_reward_stronghold_network_breakthrough_in_concrete_reinforcement_02 = { #Scientist working from Office
+			fire_only_once = yes
+			threshold = {
+				min = 50
+				max = 100
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 15
+					has_project_flag = sp_land_reward_stronghold_network_leadership_approach_office_flag
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_breakthrough_in_concrete_reinforcement_01_apply_and_document_discovery #Intentional 01
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+						}
+					}
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_breakthrough_in_concrete_reinforcement_01_use_in_current_project #Intentional 01
+				iteration_output = {
+					country_effects = {
+						FROM = {
+							add_project_progress_ratio = constant:sp_progress.gain.low
+						}
+					}
+				}
+			}
+		}
+		sp_land_reward_option_stronghold_network_collapse_01 = { #Scientist working from Office
+			fire_only_once = yes
+			threshold = {
+				min = 60
+				max = 100
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 10
+					has_project_flag = sp_land_reward_stronghold_network_leadership_approach_field_flag
+				}
+				modifier = {
+					factor = 0
+					has_project_flag = sp_land_stronghold_network_structural_weakness_discovered_flag #Used in other unique rewards to prevent multiple structural failures
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_collapse_01_prioritize_scientist
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_collapse_01_prioritize_safety
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_collapse_01_continue_without_delay
+				iteration_output = {}
+			}
+		}
+		sp_land_reward_option_stronghold_network_collapse_02 = { #Scientist working from Office
+			fire_only_once = yes
+			threshold = {
+				min = 60
+				max = 100
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 10
+					has_project_flag = sp_land_reward_stronghold_network_leadership_approach_office_flag
+				}
+				modifier = {
+					factor = 0
+					has_project_flag = sp_land_stronghold_network_structural_weakness_discovered_flag #Used in other unique rewards to prevent multiple structural failures
+				}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_collapse_01_prioritize_safety #Intentional 01
+				iteration_output = {}
+			}
+			option = {
+				token = sp_land_reward_option_stronghold_network_collapse_01_continue_without_delay #Intentional 01
+				iteration_output = {}
+			}
+		}
+	}
+}
+#Large Caliber Kinetic energy sabot - Pfot
+sp_land_large_caliber_kinetic_energy_sabot = {
+	specialization = specialization_land
+	project_tags = sp_tag_artillery
+	ai_will_do = {
+		base = 1
+		modifier = { #Forts are a very pressing issue for me
+			factor = 100
+			FROM = {
+				any_enemy_country = {
+					is_neighbor_of = FROM
+					any_controlled_state = {
+						any_province_building_level = {
+							province = {
+								limit_to_border = yes
+							}
+							building = bunker
+							level > 4
+						}
+					}
+				}
+			}
+		}
+	}
+	allowed = { has_dlc = "Peace For Our Time" }
+	available = {
+		FROM = {
+			has_tech = interwar_antitank
+		}
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	breakthrough_cost = { specialization_land = 1 }
+	resource_cost = {
+		resources = {
+			steel = 2
+			chromium = 4
+			tungsten = 2
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+				custom_effect_tooltip = tech_effect|sp_land_large_caliber_kinetic_energy_sabot_gd_tech
+				hidden_effect = {
+					set_technology = {
+						sp_land_large_caliber_kinetic_energy_sabot_gd_tech = 1
+						popup = no
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_TECH
+					TECH = sp_advance_sabot_shells
+				}
+			}
+			else = {
+				custom_effect_tooltip = tech_effect|sp_land_large_caliber_kinetic_energy_sabot_no_gd_tech
+				hidden_effect = {
+					set_technology = {
+						sp_land_large_caliber_kinetic_energy_sabot_no_gd_tech = 1
+						popup = no
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_TECH
+					TECH = sp_advance_sabot_shells
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+	}
+}
